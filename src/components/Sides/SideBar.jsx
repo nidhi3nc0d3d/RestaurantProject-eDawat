@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData.jsx';
@@ -18,7 +18,13 @@ const Nav = styled.div`
   height: 80px;
   display : flex;
   align-items: center;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  position : fixed;
+  // position : relative;
+  top : 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  z-index : 1
 `;
 
 const NavIcon = styled(Link)`
@@ -48,22 +54,23 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
+
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
-
+  const navigate = useNavigate();
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
     <div>
       <IconContext.Provider value={{ color: '#fff' }}>
-        <Nav fixed="top" className='main'>
+        <Nav className='main'>
           <Container className='col-1'>
             <NavIcon to='#'>
-              <FaIcons.FaBars onClick={showSidebar} />
+              <FaIcons.FaBars onClick={showSidebar}/>
             </NavIcon>
           </Container>
-          <Container className='col-9' style={{ justifyContent: "flex-center" }}>
-            <Navbar.Brand href="#home">
+          <Container className='col-9' style={{ justifyContent: "flex-center"}}>
+            <Navbar.Brand >
               <img
                 alt="resturant-logo"
                 src={Logo}
@@ -72,7 +79,6 @@ const Sidebar = () => {
                 className="d-inline-block align-top"
               />{' '}
               <h1 style={{ display: "inline", color: "white" }}>e-Dawat</h1>
-
             </Navbar.Brand>
           </Container>
           <Container className='col-2' style={{ justifyContent: "flex-end", marginBottom : "22px"}}>
@@ -82,7 +88,14 @@ const Sidebar = () => {
                 Signed in as: <a href="#login">Admin</a>
               </Navbar.Text>
               <>...</>
-              <Button variant="danger" style={{ fontSize: "15px" }}>Logout</Button>{' '}
+              <Button variant="danger" style={{ fontSize: "15px" }} href='#logout'
+              onClick = {
+                () => {
+                  sessionStorage.setItem("isVerified", false);
+                  navigate("/login");
+                }
+              }
+              >Logout</Button>{' '}
             </NavbarBrand>
           </Container>
         </Nav>
@@ -94,6 +107,9 @@ const Sidebar = () => {
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
+            
+            <br/><br /><br/><br /><br/><br /><br/><br /><br/><br /><br/><br />
+            <h5>©Nidhi, 2023. All rights reserved❤</h5>
           </SidebarWrap>
         </SidebarNav>
       </IconContext.Provider>

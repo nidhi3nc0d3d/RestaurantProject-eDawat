@@ -2,7 +2,7 @@
 // import Container from 'react-bootstrap/Container';
 // import Navbar from 'react-bootstrap/Navbar';
 // import Button from 'react-bootstrap/Button';
-// // import Logo from './Logo.png' //Tell Webpack this JS file uses this image
+// import Logo from './Sides/Logo.png' //Tell Webpack this JS file uses this image
 // import 'bootstrap/dist/css/bootstrap.css';
 // // import './styles.css';
 
@@ -10,7 +10,7 @@
 // function NavBar() {
 //     return (
 //         <div>
-//             <Navbar id="main" bg="#000000" variant="dark" fixed="top">
+//             <Navbar id="main" bg="#000000" variant="dark" fixed="top" >
 //                 <Container>
 //                     <Navbar.Brand href="#home">
 //                         <img

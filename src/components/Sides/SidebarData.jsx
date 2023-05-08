@@ -6,18 +6,18 @@ import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
+    title: 'Home',
+    path: '/ShowMenus',
+    icon: <IoIcons.IoMdRestaurant/>
+
+  },
+  {
     title: 'Menu',
-    path: '/Menu',
     icon: <AiIcons.AiOutlineMenuUnfold/>,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
-      {
-        title: 'Display Menu',
-        path: '/Menu/Display',
-        icon: <IoIcons.IoMdRestaurant/>
-      },
       {
         title: 'Add a New Menu',
         path: '/Menu/Add',
@@ -27,18 +27,11 @@ export const SidebarData = [
   },
   {
     title: 'Category',
-    path: '/Category',
     icon: <IoIcons.IoMdCube/>,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
-      {
-        title: 'Display All Items',
-        path: '/Category/AllCategory',
-        icon: <IoIcons.IoLogoXbox />,
-        cName: 'sub-nav'
-      },
       {
         title: 'Add a new Category',
         path: '/Category/AddCategory',
@@ -54,18 +47,11 @@ export const SidebarData = [
   },
   {
     title: 'Dish',
-    path: '/Dish',
     icon: <FaIcons.FaSearchMinus/>,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
     subNav: [
-        {
-          title: 'Display Dishes',
-          path: '/Dish/AllDishes',
-          icon: <IoIcons.IoMdRestaurant/>,
-          cName: 'sub-nav'
-        },
         {
           title: 'Add a new Dish',
           path: '/Dish/NewDish',

@@ -2,10 +2,11 @@ import React from 'react';
 
 const Support = () => {
   return (
-    <div style = {{marginTop : "500px", marginBottom : "500px"}}>
-      
-        <h1>Support</h1>
-     
+    <div>
+      <h1 style={{ color: "white", fontStyle: "italic",marginTop: "23%",backgroundColor: "black"}}>
+        For any help Contact
+        <h2>nidhi.mahto@jci.com📧</h2>
+      </h1>
     </div>
   );
 };

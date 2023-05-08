@@ -1,0 +1,211 @@
+.login-container{
+    height: 300px;
+    width : 500px;
+    border : 2px solid red;
+    position : relative;
+
+    top : 100px;
+    left : 500px;
+}
+.login-heading{
+    text-align: center;
+}
+
+.userId, .password{
+    height : 50px;
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.userId{
+    position : absolute;
+    left : 100px;
+    top : 60px;
+}
+
+.password{
+    position: absolute;
+    top : 130px;
+    left : 100px;
+}
+
+.login-btn{
+    height : 50px;
+    width : 250px;
+    font-size: 20px;
+    position : absolute;
+    top : 200px;
+    left : 125px;
+}
+.login-error{
+    color : red;
+    position : absolute;
+    top : 250px;
+    left : 150px;
+}
+
+.dish-card-img{
+    height : 250px;
+    width : 320px;
+    border-radius: 30px;
+    position : relative;
+    left : 0px;
+    top : 5px;
+}
+
+.menu-card{
+    height : 320px;
+    width : 320px;
+    margin : auto;
+    margin-top : 20px;
+    border : 3px solid black;
+    border-radius : 10px;
+}
+
+.menu-card-img{
+    height : 220px;
+    width : 315px;
+    border-radius : 10px 10px 0px 0px;
+    position : relative;
+    bottom: 0;
+    top : 0px;
+}
+.menu-card-heading{
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+    margin-top : 1.99px;
+    background-color: #d6acd1;
+}
+
+.menu-card-btn{
+    width : 150px;
+    position: relative;
+    border-radius:  0.375rem;
+    background-color: black;
+    color:white;
+    vertical-align: middle;
+    font-size: large;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.category-card{
+    height : 320px;
+    width : 320px;
+    margin : auto;
+    margin-top : 20px;
+    border : 3px solid black;
+    border-radius : 10px;
+    text-align: center;
+}
+
+.category-card-img, .dish-card-img
+{
+    height : 220px;
+    width : 315px;
+    border-radius : 10px 10px 0px 0px;
+    position : relative;
+    bottom: 0;
+    top : 0px;
+}
+
+.category-card-heading
+{
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+    margin-top : 1.90px;
+    background-color: #d6acd1;
+}
+
+.category-card-dish-btn
+{
+    width : 150px;
+    position: relative;
+    border-radius:  0.375rem;
+    background-color: black;
+    color:white;
+    vertical-align: middle;
+    font-size: large;
+}
+
+.go-to-menu-btn, .go-to-cat-btn
+{
+    width : 150px;
+    position: relative;
+    border-radius:  0.375rem;
+    background-color: black;
+    color:white;
+    vertical-align: middle;
+    font-size: large;
+}
+.categories-menu{
+    text-align: center;
+}
+
+.dishes-cat{
+    text-align : center;
+}
+
+.dish-card
+{
+    /* height : 550px; */
+    width : 320px;
+    margin : auto;
+    margin-top : 20px;
+    border : 2px solid black ;
+    border-radius : 10px;
+    text-align: center;
+    background-color: black;
+    animation: grow 1s both;
+     /* grow 2s infinite alternate both; */
+}
+
+@keyframes grow {
+    from { height: 300px; }
+    to { height: 550px; }
+  }
+
+
+.Dish-card-heading
+{
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+    margin-top : 1.78px;
+    background-color: #d6acd1;
+}
+
+.Dish-card-Price
+{
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+    margin-top : -2px;
+    background-color: #FEFF86;
+}
+
+.Dish-card-Nature
+{
+    text-align: center;
+    color: black;
+    margin-bottom: 5px;
+    margin-top : -2px;
+    background-color: aqua;
+}
+
+.Dish-card-desc
+{
+    text-align: center;
+    color: white;
+    font-size: large;
+    margin-bottom: 5px;
+    margin-top : 0px;
+    border-radius : 0px 0px 10px 10px;
+    word-wrap: break-word;
+}
+
